@@ -215,7 +215,7 @@ def Mie_aps(aps,m,wavelength,ams,fileid,fname):
                                                                 # efficiencies: unitless, cross-sections: nm2, 
                                                                 # coefficients: Mm-1, 
                                                                 # size distribution concentration: cm-3 per log10
-
+    print(R)
     Ext = []
     Sca = []
     Abs = []
