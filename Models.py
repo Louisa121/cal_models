@@ -219,6 +219,7 @@ def Mie_aps(aps,m,wavelength,ams,fileid,fname):
     Ext = []
     Sca = []
     Abs = []
+    bigG = []
     cal_coef = []
 
     for k in range(len(m.columns)):
