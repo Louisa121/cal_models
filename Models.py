@@ -225,7 +225,8 @@ def Mie_aps(aps,m,wavelength,ams,fileid,fname):
         Ext.append(pd.DataFrame([R[i][k]['Bext'] for i in R], columns = ['Ext']))
         Sca.append(pd.DataFrame([R[i][k]['Bsca'] for i in R], columns = ['Sca']))
         Abs.append(pd.DataFrame([R[i][k]['Babs'] for i in R], columns = ['Abs']))
-        cal_coef.append(pd.concat([Ext[k], Sca[k], Abs[k]], axis=1))
+        bigG.append(pd.DataFrame([R[i][k]['bigG'] for i in R], columns = ['bigG']))
+        cal_coef.append(pd.concat([Ext[k], Sca[k], Abs[k], bigG[k]], axis=1))
     cal_coef = pd.concat(cal_coef,axis=1)
     cal_coef.index = ams.index
     return cal_coef
